@@ -78,9 +78,27 @@ console.log(`precio Final es ${precioFinal} euro`);
 
 console.log("ex)3");
 
-let lado1;
-let lado2;
-let lado3;
+let lado1 = 6;
+let lado2 = 5;
+let lado3 = 3;
+
+let triangulo;
+
+if (
+  lado1 + lado2 <= lado3 || lado1 + lado3 <= lado2 || lado2 + lado3 <= lado1) {
+ 
+    triangulo = "No válido";
+} else if (lado1 === lado2 && lado2 === lado3) {
+ 
+    triangulo = "Equilátero";
+} else if (
+  lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+  triangulo = "Isósceles";
+} else {
+  triangulo = "Escaleno";
+}
+
+console.log(triangulo);
 
 
 
@@ -118,7 +136,9 @@ if(zona === "urbana"){
         console.log("multa grave");
     } else if(velocidad > 120){
         console.log("multa leve");
-    }console.log("sin multa");
+    }else{
+        console.log("sin mmulta");
+    }
 }
 
 // 04TA05_
